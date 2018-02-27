@@ -1,15 +1,56 @@
 @color-blue: #082841;
-@color-gray: rgb( 71, 71, 71 );
+@color-white: #ffffff;
 
-@header-font1: "Open Sans",  sans-serif;
-@header-font2: "Museo Sans Cyrl",  sans-serif;
-
-
+@header-font1: "Helvetica-Bold",  sans-serif;
+@header-font2: "Georgia",  sans-serif;
 
 header {
-  height: 672px;
-  background-color: @color-blue;
-  font-family: @header-font1, @header-font2; }
+  width:100%;
+	margin:0 auto;
+	height: 672px;
+	background-color: @color-white;
+}
 
-p {
-  font-size: 30px; }
+.wraper {
+  height: 672px;
+  min-width: 1440px;
+  margin: 0 auto;
+  background-color: @color-blue;
+  color: @color-white;
+  font-family: @header-font1;
+
+  .logo {
+    background: url(../images/logo.jpg) no-repeat;
+    height: 672px;
+    width: 552px;
+    float: left;
+  }
+
+  .information {
+    float: right;
+    margin-left: 96px;
+
+    .position {
+      margin-top: 65px;
+      width: 288px;
+      height: 29px;
+      font-size: 24px;}
+
+    .name {
+      margin-top: 105px;
+      width: 402px;
+      height: 48px;
+      font-size: 40px;}
+
+    .skils {
+      margin-top: 234px;
+      width: 544px;
+      height: 196px;
+      font-size: 20px;
+      font-family: @header-font2;}
+  }
+}
+
+
+
+
