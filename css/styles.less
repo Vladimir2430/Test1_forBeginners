@@ -1,9 +1,13 @@
 @color-blue: #082841;
 @color-white: #ffffff;
 @color-black: #000000;
+@color-orange: #DD3E18;
+@color-orange-lite: rgb(255, 94, 0);
 
 @header-font1: "Helvetica-Bold",  sans-serif;
 @header-font2: "Georgia",  sans-serif;
+
+@gradient: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
 
 @media (min-width: 1440px) {
   header {
@@ -75,55 +79,190 @@
   .information {
     width: 600px;
     height: 384px;
-    float: right;
+    float: left;
     font-family: @header-font1;
 
-    .position {
+    h3 {
       width: 288px;
       height: 29px;
       font-size: 24px;
+      line-height: 29px;
       padding: 65px 0 0 95px;
     }
 
-    .name {
-      width: 464px;
+    h1 {
+      width: 564px;
       height: 48px;
       font-size: 40px;
+      line-height: 48px;
       padding: 11px 0 0 95px;
     }
-  }
-
-  .skils {
-    margin-top: 0px;
-    width: 600px;
-    height: 384px;
-    float: right;
-    font-size: 20px;
-    font-family: @header-font2;
 
     p {
       width: 464px;
       height: 252px;
-      padding: 35px 0 0 95px;
-      margin: 0;
+      padding: 266px 0 0 95px;
+      font-size: 20px;
+      line-height: 28px;
+      font-family: @header-font2;
     }
   }
 
   main {
-    p {
-      width: 371px;
+    h1 {
+      width: 571px;
       height: 48px;
-      margin: 106px 0 0 40px;
+      margin-top: 106px;
+      margin-left: 2%;
       font-size: 40px;
       font-family: @header-font1;
     }
 
     .expect {
-      width: 944px;
+      width: 96%;
+      min-width: 944px;
       height: 448px;
-      margin: 38px 0 0 40px;
-      background-color: @color-blue;
+      margin-top: 38px;
+      margin-right: 2%;
+      margin-bottom: 23px;
+      margin-left: 2%;
+      background-image: @gradient;
+      border-radius: 4px;
     }
+
+    .works {
+      width: 96%;
+      min-width: 944px;
+      height: 384px;
+      margin-top: 63px;
+      margin-right: 2%;
+      margin-bottom: 80px;
+      margin-left: 2%;
+      background: red;
+    }
+  }
+
+  footer {
+    .contacts {
+      width: 43%;
+      min-width: 439px;
+      height: 715px;
+      margin: 63px 0 0 0;
+      float: left;
+      background-image: @gradient;
+    }
+
+    h1 {
+      width: 503px;
+      height: 48px;
+      padding: 81px 0 0 39px;
+      font-size: 40px;
+      font-family: @header-font1;
+    }
+
+    p {
+      width: 304px;
+      height: 203px;
+      padding: 61px 0 0 39px;
+      font-size: 16px;
+      font-family: @header-font2;
+      line-height: 24px;
+    }
+
+    h4 {
+      width: 304px;
+      height: 203px;
+      padding: 0 0 0 39px;
+      margin-top: -60px;
+      font-size: 16px;
+      font-family: @header-font2;
+      line-height: 24px;
+    }
+
+    .social a{
+      text-align:center;
+      width: 30px;
+      height: 30px;
+      float:left;
+      background: @color-white;
+      border:1px solid #ccc;
+      box-shadow:0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      margin:0 10px 10px 0;
+      padding: 0px;
+      color: @color-black;
+    }
+
+    .facebook a:hover {background:#3b5998;color:#fff;}
+
+    .linkedin a:hover {background:#0e76a8;color:#fff;}
+
+    .github a:hover {background:#191919;color:#fff;}
+
+    .instagram a:hover {background:#3f729b;color:#fff;}
+
+    .forms {
+      width: 57%;
+      min-width: 584px;
+      height: 524px;
+      float: right;
+      margin: 63px 0 0 0;
+      padding: 192px 0 0 0;
+      background-image: @gradient;
+    }
+
+    input[type=text], select {
+      width: 90%;
+      min-width: 544px;
+      height: 48px;
+      padding: 0 20px;
+      margin: 12px 0;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[name="later"], select {
+      width: 90%;
+      min-width: 544px;
+      height: 192px;
+      padding: 0 20px;
+      margin: 12px 0;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[type=text]:hover {
+      border: 1px solid @color-black;
+    }
+
+    input[type=submit] {
+      width: 90%;
+      min-width: 544px;
+      height: 49px;
+      background-color: @color-orange;
+      color: @color-white;
+      font-family: @header-font1;
+      line-height: 24px;
+      font-size: 16px;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+  input[type=submit]:hover {
+      background-color: @color-orange-lite;
+  }
+
+  h5 {
+    font-family: @header-font1;
+    font-size: 16px;
+    color: @color-orange;
+  }
+
   }
 }
 
