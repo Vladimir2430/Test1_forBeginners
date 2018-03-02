@@ -175,7 +175,7 @@ html{
       width: 224px;
       height: 384px;
       padding: 0 40px 0 0;
-      float: right;
+      float: left;
       font-family: @header-font1;
     }
 
@@ -196,7 +196,14 @@ html{
     }
 
     .discription>p {
-      padding-top: 150px;
+      padding-top: 165px;
+      width: 304px;
+      height: 147px;
+      opacity: 0.8;
+      font-family: @header-font2;
+      font-size: 16px;
+      color: @color-black;
+      line-height: 24px;
     }
                                        /* SITE */
     .my-site {
@@ -242,7 +249,14 @@ html{
     }
 
     .discription-site>p {
-      padding-top: 180px;
+      padding-top: 165px;
+      width: 304px;
+      height: 147px;
+      opacity: 0.8;
+      font-family: @header-font2;
+      font-size: 16px;
+      color: @color-black;
+      line-height: 24px;
     }
                                       /*REACT APP*/
     .my-react-app {
@@ -267,7 +281,7 @@ html{
       width: 224px;
       height: 384px;
       padding: 0 40px 0 0;
-      float: right;
+      float: left;
       font-family: @header-font1;
     }
 
@@ -288,7 +302,14 @@ html{
     }
 
     .discription-app>p {
-      padding-top: 180px;
+      padding-top: 200px;
+      width: 304px;
+      height: 147px;
+      opacity: 0.8;
+      font-family: @header-font2;
+      font-size: 16px;
+      color: @color-black;
+      line-height: 24px;
     }
   }
                                         /*FOOTER*/
@@ -436,7 +457,96 @@ html{
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 768px) and (max-width: 1023px) {
+  html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+                                        /*HEADER*/
+  header {
+    width:100%;
+    height: 1024px;
+    min-width: 768px;
+    margin:0 auto;
+    background-color: @color-blue;
+    color: @color-white;
+  }
+
+  .logo {
+    background: url(../images/logo_tablet.jpg) no-repeat;
+    height: 384px;
+    width: 384px;
+    margin-top: 50px;
+    margin-left: 28.5%;
+    margin-right: 28.5%;
+    border-radius: 300px;
+  }
+
+  .information {
+    width: 100%;
+    min-width: 768px;
+    height: 224px;
+    font-family: @header-font1;
+
+    h3 {
+      width: 100%;
+      height: 29px;
+      font-size: 16px;
+      padding-top: 97px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+     	justify-content: center;
+      align-items: center;
+      align-content: center;
+     }
+
+    h1 {
+      width: 100%px;
+      height: 80px;
+      font-size: 40px;
+      line-height: 48px;
+      padding-top: 15px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+     	justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    p {
+      width: 70%;
+      height: 196px;
+      margin-top: 500px;
+      margin-left: 15%;
+      margin-right: 15%;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: @header-font2;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 336px) and (max-width: 767px) {
                                           /*HEADER*/
@@ -460,8 +570,8 @@ html{
     height: 144px;
     width: 144px;
     margin-top: 50px;
-    margin-left: 28.5%;
-    margin-right: 28.5%;
+    margin-left: 40%;
+    margin-right: 40%;
     border-radius: 72px;
   }
 
@@ -472,32 +582,38 @@ html{
     font-family: @header-font1;
 
     h3 {
-      width: 60%;
+      width: 100%;
       min-width: 192px;
       height: 19px;
       font-size: 16px;
       padding-top: 33px;
-      margin-left: 20%;
-      margin-right: 20%;
+      display: flex;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+     	justify-content: center;
+	    align-items: center;
+	    align-content: center;
     }
 
     h1 {
-      width: 64%;
+      width: 100%;
       min-width: 305px;
       height: 80px;
       font-size: 32px;
       line-height: 40px;
       padding-top: 15px;
-      margin-left: 18%;
-      margin-right: 18%;
       display: flex;
-      align-content: center;
+	    flex-direction: row;
+	    flex-wrap: nowrap;
+     	justify-content: center;
+	    align-items: center;
+	    align-content: center;
     }
 
     p {
       width: 90%;
       height: 267px;
-      margin-top: 300px;
+      margin-top: 290px;
       padding-left: 5%;
       padding-right: 5%;
       font-size: 16px;
@@ -720,11 +836,14 @@ html{
   }
                                             /*FOOTER*/
   footer {
+    background-image: @gradient;
+    width: 100%;
+    height: 960px;
+
     .contacts {
       width: 100%;
       min-width: 336px;
       height: 480px;
-      background-image: @gradient;
     }
 
     .contacts>h1 {
@@ -783,7 +902,6 @@ html{
       width: 100%;
       min-width: 336px;
       height: 480px;
-      background-image: @gradient;
     }
 
     input[type=text], select {
