@@ -16,7 +16,398 @@ html{
   overflow-x: hidden;
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+                                        /*HEADER*/
+  html{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  header {
+    width:100%;
+    height: 672px;
+    min-width: 1440px;
+    margin:0 auto;
+    background-color: @color-blue;
+    color: @color-white;
+  }
+
+  .logo {
+    background: url(../images/logo_desktop.jpg) no-repeat;
+    height: 768px;
+    width: 504px;
+    float: left;
+  }
+
+  .information {
+    width: 888px;
+    height: 336px;
+    float: right;
+    font-family: @header-font1;
+
+    h3 {
+      width: 288px;
+      height: 29px;
+      font-size: 24px;
+      line-height: 29px;
+      padding: 65px 0 0 95px;
+    }
+
+    h1 {
+      width: 564px;
+      height: 48px;
+      font-size: 40px;
+      line-height: 48px;
+      padding: 11px 0 0 95px;
+    }
+
+    p {
+      width: 464px;
+      height: 252px;
+      padding: 266px 0 0 95px;
+      font-size: 20px;
+      line-height: 28px;
+      font-family: @header-font2;
+    }
+  }
+                                        /*MAIN*/
+  main {
+    input[type='radio'] {
+      width: 0.1px;
+    	height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+      z-index: -1;
+      color: @color-white;
+      border-color: @color-white;
+    }
+
+    h1 {
+      width: 571px;
+      height: 48px;
+      margin-top: 106px;
+      margin-left: 17%;
+      font-size: 40px;
+      font-family: @header-font1;
+    }
+
+    .slider {
+      width: 66%;
+      min-width: 944px;
+      height: 448px;
+      margin-top: 38px;
+      margin-right: 17%;
+      margin-bottom: 23px;
+      margin-left: 17%;
+      border-radius: 4px;
+    }
+
+    .slide1 {
+      height: 215px;
+      width: 59%;
+      min-width: 554px;
+      background-image: @gradient;
+      margin: 0 0px 0px 0;
+      float: left;
+    }
+
+    .slide2 {
+      height: 215px;
+      width: 39%;
+      min-width: 382px;
+      background-image: @gradient;
+      float: right;
+    }
+
+    .slide3 {
+      height: 215px;
+      width: 39%;
+      min-width: 382px;
+      background-image: @gradient;
+      margin: 18px 0px 0px 0px;
+      float: left;
+    }
+
+    .slide4 {
+      height: 215px;
+      width: 59%;
+      min-width: 554px;
+      background-image: @gradient;
+      margin: 18px 0 0 0;
+      float: right;
+    }
+
+    .slide1>p, .slide2>p, .slide3>p, .slide4>p {
+      height: 64px;
+      width: 400px;
+      padding: 32px 0 0 32px;
+      font-family: @header-font2;
+      font-size: 16px;
+      color: @color-black;
+      line-height: 24px;
+    }
+
+    .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
+      font-family: @header-font1;
+      font-size: 24px;
+      color: @color-black;
+      padding: 32px 0 0 32px;
+    }
+                                          /* GAME */
+    .my-game {
+      width: 66%;
+      min-width: 944px;
+      height: 384px;
+      margin-top: 63px;
+      margin-right: 17%;
+      margin-bottom: 80px;
+      margin-left: 17%;
+    }
+
+    .scrinshot {
+      background: url(../images/game_loptop.jpg) no-repeat;
+      height: 384px;
+      width: 640px;
+      padding: 0 0 0 40px;
+      float: left;
+    }
+
+    .discription {
+      width: 224px;
+      height: 384px;
+      padding: 0 40px 0 0;
+      float: left;
+      font-family: @header-font1;
+      display: flex;
+	    flex-direction: column;
+    	flex-wrap: nowrap;
+    	justify-content: space-between;
+    	align-items:  flex-start;
+    	align-content: center;
+    }
+
+    .jobshead>h3 {
+      width: 304px;
+      height: 29px;
+      font-family: @header-font1;
+      font-size: 24px;
+      color: @color-black;
+    }
+
+    .jobshead>a {
+      text-decoration: none;
+    }
+
+    .jobshead>a:hover {
+      color: @color-orange;
+    }
+
+    .jobshead>p {
+      width: 304px;
+      height: 147px;
+      opacity: 0.8;
+      font-family: @header-font2;
+      font-size: 16px;
+      color: @color-black;
+      line-height: 24px;
+    }
+                                       /* SITE */
+    .my-site {
+      width: 66%;
+      min-width: 944px;
+      height: 384px;
+      margin-top: 63px;
+      margin-right: 17%;
+      margin-bottom: 80px;
+      margin-left: 17%;
+    }
+
+    .scrinshot-site {
+      background: url(../images/site_loptop.jpg) no-repeat;
+      height: 384px;
+      width: 544px;
+      padding: 0 0 0 40px;
+      float: right;
+    }
+                                      /*REACT APP*/
+    .my-react-app {
+      width: 66%;
+      min-width: 944px;
+      height: 384px;
+      margin-top: 63px;
+      margin-right: 17%;
+      margin-bottom: 80px;
+      margin-left: 17%;
+    }
+
+    .scrinshot-app {
+      background: url(../images/app_loptop.jpg) no-repeat;
+      height: 384px;
+      width: 640px;
+      padding: 0 0 0 40px;
+      float: left;
+    }
+  }
+                                        /*FOOTER*/
+  footer {
+    .last {
+      display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap-reverse;
+	    justify-content: center;
+    	align-items: center;
+      align-content: space-around;
+      background: @gradient;
+    }
+
+    .contacts {
+      width: 26%;
+      min-width: 429px;
+      height: 715px;
+      margin: 63px 0px 0px 0px;
+      float: left;
+      background-image: @gradient;
+    }
+
+    .contacts>h1 {
+      width: 503px;
+      height: 48px;
+      padding: 81px 0px 0px 39px;
+      font-size: 40px;
+      font-family: @header-font1;
+      position: absolute;
+    }
+
+    p {
+      width: 304px;
+      height: 203px;
+      margin-top: 140px;
+      padding: 61px 0px 0px 39px;
+      font-size: 16px;
+      font-family: @header-font2;
+      line-height: 24px;
+    }
+
+    h4 {
+      width: 304px;
+      height: 203px;
+      padding-left: 39px;
+      margin-top: -70px;
+      font-size: 16px;
+      font-family: @header-font2;
+      line-height: 24px;
+    }
+
+    .social {
+      height: 147px;
+      width: 100px;
+      padding: 0px 0px 0px 40px;
+      margin: -190px 0px 0px 0px;
+      color: @color-gray;
+    }
+
+    .social>li>a {
+      color: @color-orange;
+      text-decoration: none;
+      font-family: @header-font2;
+      font-size: 16px;
+      line-height: 32px;
+      padding: 10px 12px;
+    }
+
+    .social>li>a:hover {
+      color: @color-orange-lite;
+    }
+
+    .social>li>a:focus {
+      color: @color-blue;
+    }
+
+    .forms {
+      width: 40%;
+      min-width: 574px;
+      height: 524px;
+      float: right;
+      margin: 63px 0px 0px 0px;
+      padding: 192px 0px 0px 0px;
+      background-image: @gradient;
+    }
+
+    input[type=text], select {
+      width: 90%;
+      min-width: 524px;
+      height: 48px;
+      padding: 0 20px;
+      margin: 12px 0px;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[name="later"], select {
+      width: 90%;
+      min-width: 524px;
+      height: 192px;
+      padding: 0 20px;
+      margin: 12px 0;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[type=text]:hover {
+      border: 1px solid @color-black;
+    }
+
+    input[type=file] {
+      width: 0.1px;
+    	height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+      z-index: -1;
+    }
+
+    .fa-sticky-note {
+      cursor: pointer;
+      color: @color-orange;
+    }
+
+    .fa-sticky-note:hover {
+      color: @color-orange-lite;
+    }
+
+    .fa-sticky-note>span {
+      margin: 0px 0px 0px 10px;
+    }
+
+    input[type=submit] {
+      width: 95%;
+      min-width: 544px;
+      height: 49px;
+      background-color: @color-orange;
+      color: @color-white;
+      font-family: @header-font1;
+      line-height: 24px;
+      font-size: 16px;
+      padding: 14px 20px;
+      margin: 32px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: @color-orange-lite;
+    }
+  }
+}
+
+
+
+
 
 @media  (min-width: 1024px) and (max-width: 1439px) {
                                         /*HEADER*/
@@ -177,9 +568,15 @@ html{
       padding: 0 40px 0 0;
       float: left;
       font-family: @header-font1;
+      display: flex;
+	    flex-direction: column;
+    	flex-wrap: nowrap;
+    	justify-content: space-between;
+    	align-items:  flex-start;
+    	align-content: center;
     }
 
-    .discription>h3 {
+    .jobshead>h3 {
       width: 304px;
       height: 29px;
       font-family: @header-font1;
@@ -187,16 +584,15 @@ html{
       color: @color-black;
     }
 
-    .discription>a {
+    .jobshead>a {
       text-decoration: none;
     }
 
-    .discription>a:hover {
+    .jobshead>a:hover {
       color: @color-orange;
     }
 
-    .discription>p {
-      padding-top: 165px;
+    .jobshead>p {
       width: 304px;
       height: 147px;
       opacity: 0.8;
@@ -223,41 +619,6 @@ html{
       padding: 0 0 0 40px;
       float: right;
     }
-
-    .discription-site {
-      width: 320px;
-      height: 384px;
-      padding: 0 40px 0 0;
-      float: left;
-      font-family: @header-font1;
-    }
-
-    .discription-site>h3 {
-      width: 304px;
-      height: 29px;
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-    }
-
-    .discription-site>a {
-      text-decoration: none;
-    }
-
-    .discription-site>a:hover {
-      color: @color-orange;
-    }
-
-    .discription-site>p {
-      padding-top: 165px;
-      width: 304px;
-      height: 147px;
-      opacity: 0.8;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
-    }
                                       /*REACT APP*/
     .my-react-app {
       width: 96%;
@@ -275,41 +636,6 @@ html{
       width: 640px;
       padding: 0 0 0 40px;
       float: left;
-    }
-
-    .discription-app {
-      width: 224px;
-      height: 384px;
-      padding: 0 40px 0 0;
-      float: left;
-      font-family: @header-font1;
-    }
-
-    .discription-app>h3 {
-      width: 304px;
-      height: 29px;
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-    }
-
-    .discription-app>a {
-      text-decoration: none;
-    }
-
-    .discription-app>a:hover {
-      color: @color-orange;
-    }
-
-    .discription-app>p {
-      padding-top: 200px;
-      width: 304px;
-      height: 147px;
-      opacity: 0.8;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
     }
   }
                                         /*FOOTER*/
@@ -457,6 +783,9 @@ html{
   }
 }
 
+
+
+
 @media (min-width: 768px) and (max-width: 1023px) {
   html {
     width: 100%;
@@ -527,21 +856,467 @@ html{
       font-family: @header-font2;
     }
   }
+                                        /*MAIN*/
+  main {
+    input[type='radio'] {
+      width: 0.1px;
+    	height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+      z-index: -1;
+      color: @color-white;
+      border-color: @color-white;
+    }
+
+    h1 {
+      width: 571px;
+      height: 48px;
+      margin-top: 106px;
+      margin-left: 2%;
+      font-size: 40px;
+      font-family: @header-font1;
+    }
+
+    .slider {
+      width: 96%;
+      min-width: 704px;
+      height: 448px;
+      margin-top: 38px;
+      margin-right: 2%;
+      margin-bottom: 23px;
+      margin-left: 2%;
+      border-radius: 4px;
+    }
+
+    .slide1 {
+      height: 215px;
+      width: 58%;
+      min-width: 404px;
+      background-image: @gradient;
+      margin: 0 0px 0px 0;
+      float: left;
+    }
+
+    .slide2 {
+      height: 215px;
+      width: 39%;
+      min-width: 300px;
+      background-image: @gradient;
+      float: right;
+    }
+
+    .slide3 {
+      height: 215px;
+      width: 39%;
+      min-width: 300px;
+      background-image: @gradient;
+      margin: 18px 0px 0px 0px;
+      float: left;
+    }
+
+    .slide4 {
+      height: 215px;
+      width: 58%;
+      min-width: 404px;
+      background-image: @gradient;
+      margin: 18px 0 0 0;
+      float: right;
+    }
+
+    .slide1>p, .slide2>p, .slide3>p {
+      height: 64px;
+      width: 270px;
+      padding: 32px 0 0 32px;
+      font-family: @header-font2;
+      font-size: 16px;
+      color: @color-black;
+      line-height: 24px;
+    }
+
+    .slide4>p {
+      height: 64px;
+      width: 320px;
+      padding: 32px 0 0 32px;
+      font-family: @header-font2;
+      font-size: 16px;
+      color: @color-black;
+      line-height: 24px;
+    }
+
+    .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
+      font-family: @header-font1;
+      font-size: 24px;
+      color: @color-black;
+      padding: 20px 0 0 32px;
+    }
+                                       /*GAME*/
+    .my-game {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-items: center;
+      align-content: space-around;
+      margin: 40px 0;
+    }
+
+    .scrinshot {
+      background: url(../images/game_tablet.jpg) no-repeat;
+      height: 496px;
+      width: 704px;
+    }
+
+    .discription {
+      width: 704px;
+      height: 147px;
+      font-family: @header-font1;
+      display: flex;
+	    flex-direction: row;
+    	flex-wrap: nowrap;
+    	justify-content: space-between;
+    	align-items: center;
+    	align-content: flex-start;
+    }
+
+    .jobshead {
+      width: 304px;
+      height: 147px;
+    }
+
+    .jobshead>h3 {
+      width: 304px;
+      height: 29px;
+      font-family: @header-font1;
+      font-size: 24px;
+      color: @color-black;
+    }
+
+    .jobshead>a {
+      text-decoration: none;
+    }
+
+    .jobshead>a:hover {
+      color: @color-orange;
+    }
+
+    .discription>p {
+      width: 384px;
+      height: 147px;
+    }
+                                           /*SITE*/
+    .my-site {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-items: center;
+      align-content: space-around;
+      margin: 40px 0;
+    }
+
+    .scrinshot-site {
+      background: url(../images/site_tablet.jpg) no-repeat;
+      height: 496px;
+      width: 704px;
+    }
+                                            /*APP*/
+    .my-react-app {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-items: center;
+      align-content: space-around;
+    }
+
+    .scrinshot-app {
+      background: url(../images/app_tablet.jpg) no-repeat;
+      height: 496px;
+      width: 704px;
+    }
+  }
+                                            /*FOOTER*/
+  footer {
+    background-image: @gradient;
+    width: 100%;
+    height: 960px;
+
+    .contacts {
+      width: 100%;
+      min-width: 336px;
+      height: 480px;
+    }
+
+    .contacts>h1 {
+      width: 306px;
+      height: 80px;
+      padding: 43px 16px 0px 40px;
+      font-size: 40px;
+      font-family: @header-font1;
+    }
+
+    p {
+      width: 304px;
+      height: 106px;
+      margin-top: 140px;
+      padding: 61px 0px 0px 39px;
+      font-size: 16px;
+      font-family: @header-font2;
+      line-height: 24px;
+    }
+
+    h4 {
+      width: 0.1px;
+    	height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+      z-index: -1;
+    }
+
+    .social {
+      height: 147px;
+      width: 144px;
+      padding: 0px 0px 0px 40px;
+      margin: -290px 0px 0px 0px;
+      color: @color-gray;
+    }
+
+    .social>li>a {
+      color: @color-orange;
+      text-decoration: none;
+      font-family: @header-font2;
+      font-size: 16px;
+      line-height: 32px;
+      padding: 10px 12px;
+    }
+
+    .social>li>a:hover {
+      color: @color-orange-lite;
+    }
+
+    .social>li>a:focus {
+      color: @color-blue;
+    }
+
+    .forms {
+      width: 100%;
+      min-width: 336px;
+      height: 480px;
+    }
+
+    input[type=text], select {
+      width: 75%;
+      min-width: 244px;
+      height: 48px;
+      padding: 0 20px;
+      margin: 12px 20px;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[name="later"], select {
+      width: 75%;
+      min-width: 244px;
+      height: 192px;
+      padding: 0 20px;
+      margin: 12px 20px;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[type=text]:hover {
+      border: 1px solid @color-black;
+    }
+
+    input[type=file] {
+      width: 0.1px;
+    	height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+      z-index: -1;
+    }
+
+    .fa-sticky-note {
+      cursor: pointer;
+      color: @color-orange;
+      margin-left: 20px;
+    }
+
+    .fa-sticky-note:hover {
+      color: @color-orange-lite;
+    }
+
+    .fa-sticky-note>span {
+      margin: 0px 0px 0px 10px;
+    }
+
+    input[type=submit] {
+      width: 82%;
+      min-width: 244px;
+      height: 49px;
+      background-color: @color-orange;
+      color: @color-white;
+      font-family: @header-font1;
+      line-height: 24px;
+      font-size: 16px;
+      padding: 0px 20px;
+      margin: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: @color-orange-lite;
+    }
+  }
+                                            /*FOOTER*/
+  footer {
+    background-image: @gradient;
+    width: 100%;
+    height: 769px;
+
+    .contacts {
+      width: 100%;
+      min-width: 768px;
+      height: 265px;
+    }
+
+    .contacts>h1 {
+      width: 503px;
+      height: 48px;
+      padding: 43px 16px 0px 40px;
+      font-size: 40px;
+      font-family: @header-font1;
+    }
+
+    p {
+      width: 384px;
+      height: 106px;
+      margin-top: 0px;
+      padding: 0px 0px 0px 39px;
+      font-size: 16px;
+      font-family: @header-font2;
+      line-height: 24px;
+      float: left;
+    }
+
+    h4 {
+      width: 0.1px;
+    	height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+      z-index: -1;
+    }
+
+    .social {
+      height: 147px;
+      width: 144px;
+      padding: 0px 0px 0px 40px;
+      margin: 0px 80px 0px 0px;
+      color: @color-gray;
+      float: right;
+    }
+
+    .social>li>a {
+      color: @color-orange;
+      text-decoration: none;
+      font-family: @header-font2;
+      font-size: 16px;
+      line-height: 32px;
+      padding: 10px 12px;
+    }
+
+    .social>li>a:hover {
+      color: @color-orange-lite;
+    }
+
+    .social>li>a:focus {
+      color: @color-blue;
+    }
+
+    .forms {
+      width: 100%;
+      min-width: 336px;
+      height: 480px;
+    }
+
+    input[type=text], select {
+      width: 90%;
+      min-width: 244px;
+      height: 48px;
+      padding: 0 20px;
+      margin: 12px 20px;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[name="later"], select {
+      width: 90%;
+      min-width: 244px;
+      height: 192px;
+      padding: 0 20px;
+      margin: 12px 20px;
+      background: @color-white;
+      border: 1px solid @color-white;
+      border-radius: 4px;
+    }
+
+    input[type=text]:hover {
+      border: 1px solid @color-black;
+    }
+
+    input[type=file] {
+      width: 0.1px;
+    	height: 0.1px;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+      z-index: -1;
+    }
+
+    .fa-sticky-note {
+      cursor: pointer;
+      color: @color-orange;
+      margin-left: 20px;
+    }
+
+    .fa-sticky-note:hover {
+      color: @color-orange-lite;
+    }
+
+    .fa-sticky-note>span {
+      margin: 0px 0px 0px 10px;
+    }
+
+    input[type=submit] {
+      width: 95%;
+      min-width: 244px;
+      height: 49px;
+      background-color: @color-orange;
+      color: @color-white;
+      font-family: @header-font1;
+      line-height: 24px;
+      font-size: 16px;
+      padding: 0px 20px;
+      margin: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: @color-orange-lite;
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -745,7 +1520,7 @@ html{
     font-family: @header-font1;
   }
 
-  .discription>h3 {
+  .jobshead>h3 {
     width: 304px;
     height: 29px;
     font-family: @header-font1;
@@ -753,11 +1528,11 @@ html{
     color: @color-black;
   }
 
-  .discription>a {
+  .jobshead>a {
     text-decoration: none;
   }
 
-  .discription>a:hover {
+  .jobshead>a:hover {
     color: @color-orange;
   }
                                          /*SITE*/
@@ -775,28 +1550,6 @@ html{
     height: 216px;
     width: 304px;
   }
-
-  .discription-site {
-    width: 304px;
-    height: 224px;
-    font-family: @header-font1;
-  }
-
-  .discription-site>h3 {
-    width: 304px;
-    height: 29px;
-    font-family: @header-font1;
-    font-size: 24px;
-    color: @color-black;
-  }
-
-  .discription-site>a {
-    text-decoration: none;
-  }
-
-  .discription-site>a:hover {
-    color: @color-orange;
-  }
                                           /*APP*/
   .my-react-app {
     display: flex;
@@ -811,28 +1564,6 @@ html{
     background: url(../images/app_phone.jpg) no-repeat;
     height: 216px;
     width: 304px;
-  }
-
-  .discription-app {
-    width: 304px;
-    height: 224px;
-    font-family: @header-font1;
-  }
-
-  .discription-app>h3 {
-    width: 304px;
-    height: 29px;
-    font-family: @header-font1;
-    font-size: 24px;
-    color: @color-black;
-  }
-
-  .discription-app>a {
-    text-decoration: none;
-  }
-
-  .discription-app>a:hover {
-    color: @color-orange;
   }
                                             /*FOOTER*/
   footer {
