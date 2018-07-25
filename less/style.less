@@ -136,9 +136,6 @@ body {
   }
                                         /*FOOTER*/
   footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
     background-image: @gradient;
     .contacts
       h1 {font-family: @fontBold;}
@@ -263,6 +260,9 @@ body {
   }
                                         /*FOOTER*/
   footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     .contacts {
       margin-left: 40px;
       float: left;
@@ -462,6 +462,19 @@ body {
         -moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
         -o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
         transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+        p {
+          height: 64px;
+          width: 400px;
+          padding: 32px 0 0 32px;
+          font-family: @fontRegular;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        h2 {
+          font-family: @fontBold;
+          font-size: 24px;
+          padding: 32px 0 0 32px;
+        }
       }
       .slide1, .slide2, .slide3, .slide4 {background: @gradient;}
       #slide1:checked ~ .slider > .slide1,
@@ -474,21 +487,6 @@ body {
         -moz-transform: scale(1);
         -o-transform: scale(1);
         transform: scale(1);
-      }
-      .slide1>p, .slide2>p, .slide3>p, .slide4>p {
-        height: 64px;
-        width: 400px;
-        padding: 32px 0 0 32px;
-        font-family: @fontRegular;
-        font-size: 16px;
-        color: black;
-        line-height: 24px;
-      }
-      .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
-        font-family: @fontBold;
-        font-size: 24px;
-        color: black;
-        padding: 32px 0 0 32px;
       }
       .controls {
         left: 50%;
@@ -516,9 +514,7 @@ body {
       #slide1:checked ~ .controls label:nth-of-type(1),
       #slide2:checked ~ .controls label:nth-of-type(2),
       #slide3:checked ~ .controls label:nth-of-type(3),
-      #slide4:checked ~ .controls label:nth-of-type(4) {
-        background: black;
-      }
+      #slide4:checked ~ .controls label:nth-of-type(4) {background: black;}
     }
     .my-works {
       display: flex;
