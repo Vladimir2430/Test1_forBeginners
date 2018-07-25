@@ -21,69 +21,34 @@
 @fontBold: "Helvetica", serif;
 @fontRegular: "Georgia", serif;
 
-html{
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-@media (min-width: 1440px) {
-                                        /*HEADER*/
-  html{
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
+body {
+  margin: 0;
+                                          /*HEADER*/
   header {
-    width:100%;
-    height: 672px;
-    min-width: 1440px;
-    margin:0 auto;
-    background-color: @color-blue;
-    color: @color-white;
-  }
-
-  .logo {
-    background: url(../images/logo_desktop.jpg) no-repeat;
-    height: 768px;
-    width: 504px;
-    float: left;
-  }
-
-  .information {
-    width: 888px;
-    height: 336px;
-    float: right;
-    font-family: @header-font1;
-
-    h3 {
-      width: 288px;
-      height: 29px;
-      font-size: 24px;
-      line-height: 29px;
-      padding: 65px 0 0 95px;
+    background-color: @color-header;
+    color: white;
+    margin: 0 auto;
+    .information {
+      font-family: @fontBold;
+      p {
+        font-family: @fontRegular;
+        text-align: justify;
+      }
     }
-
+    .mobile {
+      display: none;
+      font-family: @fontRegular;
+      text-align: justify;
+    }
+  }
+                                          /* MANE */
+  main {
     h1 {
-      width: 564px;
       height: 48px;
       font-size: 40px;
-      line-height: 48px;
-      padding: 11px 0 0 95px;
+      text-align: center;
+      font-family: @fontBold;
     }
-
-    p {
-      width: 464px;
-      height: 252px;
-      padding: 266px 0 0 95px;
-      font-size: 20px;
-      line-height: 28px;
-      font-family: @header-font2;
-    }
-  }
-                                        /*MAIN*/
-  main {
     input[type='radio'] {
       width: 0.1px;
     	height: 0.1px;
@@ -91,870 +56,318 @@ html{
 	    overflow: hidden;
 	    position: absolute;
       z-index: -1;
-      color: @color-white;
-      border-color: @color-white;
+      color: white;
+      border-color: white;
     }
-
-    h1 {
-      width: 571px;
-      height: 48px;
-      margin-top: 106px;
-      margin-left: 17%;
-      font-size: 40px;
-      font-family: @header-font1;
-    }
-
     .slider {
-      width: 66%;
-      min-width: 944px;
-      height: 448px;
-      margin-top: 38px;
-      margin-right: 17%;
-      margin-bottom: 23px;
-      margin-left: 17%;
+      height: 450px;
+      margin: 38px 2% 23px;
       border-radius: 4px;
+      .slide1 {
+        background-image: @gradient;
+        height: 215px;
+        width: 59%;
+        margin: 0;
+        float: left;
+      }
+      .slide2 {
+        background-image: @gradient;
+        height: 215px;
+        width: 39%;
+        float: right;
+      }
+      .slide3 {
+        background-image: @gradient;
+        height: 215px;
+        width: 39%;
+        margin: 18px 0 0;
+        float: left;
+      }
+      .slide4 {
+        background-image: @gradient;
+        height: 215px;
+        width: 59%;
+        margin: 18px 0 0;
+        float: right;
+      }
+      .slide1>p, .slide2>p, .slide3>p, .slide4>p {
+        padding: 32px 0 0 32px;
+        font-family: @fontRegular;
+        line-height: 24px;
+      }
+      .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
+        font-family: @fontBold;
+        padding: 32px 0 0 32px;
+      }
     }
-
-    .slide1 {
-      height: 215px;
-      width: 59%;
-      min-width: 554px;
-      background-image: @gradient;
-      margin: 0 0px 0px 0;
-      float: left;
+    .my-works {
+      margin: 0 2%;
+      figure {
+        background: url(../images/game_laptop.jpg) no-repeat;
+        height: 384px;
+        width: 570px;
+        padding: 0;
+        margin: 0;
+        float: left;
+      }
+      .screenshot-site {
+        background: url(../images/site_laptop.jpg) right no-repeat;
+        float: right;
+      }
+      .screenshot-app {
+        background: url(../images/app_laptop.jpg) no-repeat;
+      }
     }
-
-    .slide2 {
-      height: 215px;
-      width: 39%;
-      min-width: 382px;
-      background-image: @gradient;
+    article {
+      height: 384px;
+      padding: 0 5%;
+      text-align: center;
+      font-family: @fontBold;
+      h3 {font-size: 24px;}
+      a {text-decoration: none;}
+      a:hover {color: @color-button;}
+      p {
+        opacity: 0.8;
+        font-family: @fontRegular;
+        line-height: 24px;
+        text-align: justify;
+      }
+    }
+  }
+                                        /*FOOTER*/
+  footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-image: @gradient;
+    .contacts
+      h1 {font-family: @fontBold;}
+      p, h4 {
+        font-family: @fontRegular;
+        line-height: 24px;
+        text-align: justify;
+      }
+      ul {
+        padding: 0;
+        li {
+          list-style-type: none;
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            opacity: 0.1;
+            background: #000;
+            border-radius: 2px;
+          }
+          a {
+            color: @color-button;
+            text-decoration: none;
+            font-family: @fontRegular;
+            line-height: 32px;
+            padding: 10px 12px;
+          }
+          a:hover {color: @color-button-hover;}
+          a:focus {color: @color-header;}
+        }
+      }
+    }
+    form {
+      input, textarea {
+        width: 80%;
+        height: 48px;
+        padding: 0 5%;
+        margin: 12px 0 12px 5%;
+        background: white;
+        border-radius: 4px;
+        border: 1px solid white;
+        border: 1px solid black;
+      }
+      textarea {
+        height: 192px;
+        padding: 7px 5%;
+        font-size: 16px;
+      }
+      input[type=file] {
+        width: 120px;
+        height: 0;
+        padding: 0;
+        margin: 0;
+	      opacity: 0;
+	      overflow: hidden;
+        z-index: -1;
+        cursor: pointer;
+      }
+      label {
+        margin-left: -120px;
+        padding: 0 5%;
+        color: @color-button;
+      }
+      label:hover {color: @color-button-hover;}
+      input[type=submit] {
+        width: 90%;
+        background-color: @color-button;
+        color: white;
+        font-family: @fontBold;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      input[type=submit]:hover {background-color: @color-button-hover;}
+  }
+}
+                          /*------------------------------------*\
+                                      #DESKTOP
+                          \*------------------------------------*/
+@media (min-width: 1440px) {
+                                      /*HEADER*/
+  header {
+    height: 672px;
+    min-width: 1440px;
+    .information {
+      width:60%;
+      min-width: 888px;
       float: right;
+      h3 {
+        width: 288px;
+        font-size: 24px;
+        line-height: 29px;
+        padding: 65px 0 0 95px;
+      }
+      h1 {
+        width: 564px;
+        font-size: 40px;
+        line-height: 48px;
+        padding: 11px 0 0 95px;
+      }
+      p {
+        width: 80%;
+        min-width: 464px;
+        padding: 30px 0 0 95px;
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
-
-    .slide3 {
-      height: 215px;
-      width: 39%;
-      min-width: 382px;
-      background-image: @gradient;
-      margin: 18px 0px 0px 0px;
+    .logo {
+      background: url(../images/logo_desktop.jpg) no-repeat;
+      height: 672px;
+      width: 552px;
+      margin: 0;
       float: left;
     }
-
-    .slide4 {
-      height: 215px;
-      width: 59%;
-      min-width: 554px;
-      background-image: @gradient;
-      margin: 18px 0 0 0;
+  }
+                                        /*MAIN*/
+  main {
+    .slider {margin: 38px 17% 23px !important;}
+    .my-works {margin: 0 17% !important;}
+  }
+                                        /*FOOTER*/
+  footer {
+    .contacts {
+      margin-left: 40px;
+      float: left;
+      h1 {
+        width: 500px;
+        font-size: 40px;
+      }
+      p, h4 {width: 320px;}
+    }
+    .forms {
+      width: 60%;
       float: right;
+      margin: 110px 0 0 -200px;
     }
-
-    .slide1>p, .slide2>p, .slide3>p, .slide4>p {
-      height: 64px;
-      width: 400px;
-      padding: 32px 0 0 32px;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
-    }
-
-    .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-      padding: 32px 0 0 32px;
-    }
-                                          /* GAME */
-    .my-game {
-      width: 66%;
-      min-width: 944px;
-      height: 384px;
-      margin-top: 63px;
-      margin-right: 17%;
-      margin-bottom: 80px;
-      margin-left: 17%;
-    }
-
-    .screenshot {
-      background: url(../images/game_laptop.jpg) no-repeat;
-      height: 384px;
-      width: 640px;
-      padding: 0 0 0 40px;
-      float: left;
-    }
-
-    .description {
-      width: 224px;
-      height: 384px;
-      padding: 0 40px 0 0;
-      float: left;
-      font-family: @header-font1;
-      display: flex;
-	    flex-direction: column;
-    	flex-wrap: nowrap;
-    	justify-content: space-between;
-    	align-items:  flex-start;
-    	align-content: center;
-    }
-
-    .jobs-head>h3 {
-      width: 304px;
-      height: 29px;
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-    }
-
-    .jobs-head>a {
-      text-decoration: none;
-    }
-
-    .jobs-head>a:hover {
-      color: @color-orange;
-    }
-
-    .jobs-head>p {
-      width: 304px;
-      height: 147px;
-      opacity: 0.8;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
-    }
-                                       /* SITE */
-    .my-site {
-      width: 66%;
-      min-width: 944px;
-      height: 384px;
-      margin-top: 63px;
-      margin-right: 17%;
-      margin-bottom: 80px;
-      margin-left: 17%;
-    }
-
-    .screenshot-site {
-      background: url(../images/site_laptop.jpg) no-repeat;
-      height: 384px;
-      width: 544px;
-      padding: 0 0 0 40px;
+  }
+}
+                          /*------------------------------------*\
+                                        #LAPTOP
+                          \*------------------------------------*/
+@media  (min-width: 1024px) and (max-width: 1439px) {
+                                        /*HEADER*/
+  header {
+    height: 768px;
+    .information {
+      width:50%;
       float: right;
+      h3 {
+        font-size: 24px;
+        padding: 65px 0 0 25px;
+      }
+      h1 {
+        font-size: 40px;
+        padding: 11px 0 0 25px;
+      }
+      p {
+        padding: 30px 25px 0;
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
-                                      /*REACT APP*/
-    .my-react-app {
-      width: 66%;
-      min-width: 944px;
-      height: 384px;
-      margin-top: 63px;
-      margin-right: 17%;
-      margin-bottom: 80px;
-      margin-left: 17%;
-    }
-
-    .screenshot-app {
-      background: url(../images/app_laptop.jpg) no-repeat;
-      height: 384px;
-      width: 640px;
-      padding: 0 0 0 40px;
+    .logo {
+      background: url(../images/logo_laptop.jpg) no-repeat;
+      height: 768px;
+      width: 50%;
+      margin: 0;
       float: left;
     }
   }
                                         /*FOOTER*/
   footer {
     display: flex;
-	  flex-direction: row;
-	  flex-wrap: wrap-reverse;
-	  justify-content: center;
-  	align-items: center;
-    align-content: space-around;
-    background: @gradient;
-
     .contacts {
-      width: 26%;
-      min-width: 429px;
-      height: 715px;
-      margin: 63px 0px 0px 0px;
+      margin-left: 40px;
       float: left;
-      background-image: @gradient;
+      h1 {
+        width: 500px;
+        font-size: 40px;
+      }
+      p, h4 {width: 320px;}
     }
-
-    .contacts>h1 {
-      width: 503px;
-      height: 48px;
-      padding: 81px 0px 0px 39px;
-      font-size: 40px;
-      font-family: @header-font1;
-      position: absolute;
-    }
-
-    p {
-      width: 304px;
-      height: 203px;
-      margin-top: 140px;
-      padding: 61px 0px 0px 39px;
-      font-size: 16px;
-      font-family: @header-font2;
-      line-height: 24px;
-    }
-
-    h4 {
-      width: 304px;
-      height: 203px;
-      padding-left: 39px;
-      margin-top: -70px;
-      font-size: 16px;
-      font-family: @header-font2;
-      line-height: 24px;
-    }
-
-    ul {
-      height: 147px;
-      width: 100px;
-      padding: 0px 0px 0px 40px;
-      margin: -190px 0px 0px 0px;
-      color: @color-gray;
-    }
-
-    ul>li>a {
-      color: @color-orange;
-      text-decoration: none;
-      font-family: @header-font2;
-      font-size: 16px;
-      line-height: 32px;
-      padding: 10px 12px;
-    }
-
-    ul>li>a:hover {
-      color: @color-orange-lite;
-    }
-
-    ul>li>a:focus {
-      color: @color-blue;
-    }
-
-    form {
-      width: 40%;
-      min-width: 574px;
-      height: 524px;
+    .forms {
+      width: 60%;
       float: right;
-      margin: 63px 0px 0px 0px;
-      padding: 192px 0px 0px 0px;
-      background-image: @gradient;
-    }
-
-    input[type=text], select {
-      width: 90%;
-      min-width: 524px;
-      height: 48px;
-      padding: 0 20px;
-      margin: 12px 0px;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[name="later"], select {
-      width: 90%;
-      min-width: 524px;
-      height: 192px;
-      padding: 0 20px;
-      margin: 12px 0;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[type=text]:hover {
-      border: 1px solid @color-black;
-    }
-
-    input[type=file] {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-    }
-
-    .fa-sticky-note {
-      cursor: pointer;
-      color: @color-orange;
-    }
-
-    .fa-sticky-note:hover {
-      color: @color-orange-lite;
-    }
-
-    .fa-sticky-note>span {
-      margin: 0px 0px 0px 10px;
-    }
-
-    input[type=submit] {
-      width: 95%;
-      min-width: 544px;
-      height: 49px;
-      background-color: @color-orange;
-      color: @color-white;
-      font-family: @header-font1;
-      line-height: 24px;
-      font-size: 16px;
-      padding: 14px 20px;
-      margin: 32px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-      background-color: @color-orange-lite;
+      margin: 110px 0 0 -200px;
     }
   }
 }
-
-@media  (min-width: 1024px) and (max-width: 1439px) {
-                                        /*HEADER*/
-  header {
-    width:100%;
-    height: 768px;
-    min-width: 1024px;
-    margin:0 auto;
-    background-color: @color-blue;
-    color: @color-white;
-  }
-
-  .logo {
-    background: url(../images/logo_laptop.jpg) no-repeat;
-    height: 768px;
-    width: 504px;
-    margin-left: -80px;
-    float: left;
-  }
-
-  .information {
-    width: 600px;
-    height: 384px;
-    float: right;
-    font-family: @header-font1;
-
-    h3 {
-      width: 288px;
-      height: 29px;
-      font-size: 24px;
-      line-height: 29px;
-      padding: 65px 0 0 95px;
-    }
-
-    h1 {
-      width: 564px;
-      height: 48px;
-      font-size: 40px;
-      line-height: 48px;
-      padding: 11px 0 0 95px;
-    }
-
-    p {
-      width: 464px;
-      height: 252px;
-      padding: 266px 0 0 95px;
-      font-size: 20px;
-      line-height: 28px;
-      font-family: @header-font2;
-    }
-  }
-                                        /*MAIN*/
-  main {
-    input[type='radio'] {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-      color: @color-white;
-      border-color: @color-white;
-    }
-
-    h1 {
-      width: 571px;
-      height: 48px;
-      margin-top: 106px;
-      margin-left: 2%;
-      font-size: 40px;
-      font-family: @header-font1;
-    }
-
-    .slider {
-      width: 96%;
-      min-width: 944px;
-      height: 448px;
-      margin-top: 38px;
-      margin-right: 2%;
-      margin-bottom: 23px;
-      margin-left: 2%;
-      border-radius: 4px;
-    }
-
-    .slide1 {
-      height: 215px;
-      width: 59%;
-      min-width: 554px;
-      background-image: @gradient;
-      margin: 0 0px 0px 0;
-      float: left;
-    }
-
-    .slide2 {
-      height: 215px;
-      width: 39%;
-      min-width: 382px;
-      background-image: @gradient;
-      float: right;
-    }
-
-    .slide3 {
-      height: 215px;
-      width: 39%;
-      min-width: 382px;
-      background-image: @gradient;
-      margin: 18px 0px 0px 0px;
-      float: left;
-    }
-
-    .slide4 {
-      height: 215px;
-      width: 59%;
-      min-width: 554px;
-      background-image: @gradient;
-      margin: 18px 0 0 0;
-      float: right;
-    }
-
-    .slide1>p, .slide2>p, .slide3>p, .slide4>p {
-      height: 64px;
-      width: 400px;
-      padding: 32px 0 0 32px;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
-    }
-
-    .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-      padding: 32px 0 0 32px;
-    }
-                                          /* GAME */
-    .my-game {
-      width: 96%;
-      min-width: 944px;
-      height: 384px;
-      margin-top: 63px;
-      margin-right: 2%;
-      margin-bottom: 80px;
-      margin-left: 2%;
-    }
-
-    .screenshot {
-      background: url(../images/game_laptop.jpg) no-repeat;
-      height: 384px;
-      width: 640px;
-      padding: 0 0 0 40px;
-      float: left;
-    }
-
-    .description {
-      width: 224px;
-      height: 384px;
-      padding: 0 40px 0 0;
-      float: left;
-      font-family: @header-font1;
-      display: flex;
-	    flex-direction: column;
-    	flex-wrap: nowrap;
-    	justify-content: space-between;
-    	align-items:  flex-start;
-    	align-content: center;
-    }
-
-    .jobs-head>h3 {
-      width: 304px;
-      height: 29px;
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-    }
-
-    .jobs-head>a {
-      text-decoration: none;
-    }
-
-    .jobs-head>a:hover {
-      color: @color-orange;
-    }
-
-    .jobs-head>p {
-      width: 304px;
-      height: 147px;
-      opacity: 0.8;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
-    }
-                                       /* SITE */
-    .my-site {
-      width: 96%;
-      min-width: 944px;
-      height: 384px;
-      margin-top: 63px;
-      margin-right: 2%;
-      margin-bottom: 80px;
-      margin-left: 2%;
-    }
-
-    .screenshot-site {
-      background: url(../images/site_laptop.jpg) no-repeat;
-      height: 384px;
-      width: 544px;
-      padding: 0 0 0 40px;
-      float: right;
-    }
-                                      /*REACT APP*/
-    .my-react-app {
-      width: 96%;
-      min-width: 944px;
-      height: 384px;
-      margin-top: 63px;
-      margin-right: 2%;
-      margin-bottom: 80px;
-      margin-left: 2%;
-    }
-
-    .screenshot-app {
-      background: url(../images/app_laptop.jpg) no-repeat;
-      height: 384px;
-      width: 640px;
-      padding: 0 0 0 40px;
-      float: left;
-    }
-  }
-                                        /*FOOTER*/
-  footer {
-    background-image: @gradient;
-    .contacts {
-      width: 43%;
-      min-width: 429px;
-      height: 715px;
-      margin: 63px 0px 0px 0px;
-      float: left;
-    }
-
-    .contacts>h1 {
-      width: 503px;
-      height: 48px;
-      padding: 81px 0px 0px 39px;
-      font-size: 40px;
-      font-family: @header-font1;
-      position: absolute;
-    }
-
-    p {
-      width: 304px;
-      height: 203px;
-      margin-top: 140px;
-      padding: 61px 0px 0px 39px;
-      font-size: 16px;
-      font-family: @header-font2;
-      line-height: 24px;
-    }
-
-    h4 {
-      width: 304px;
-      height: 203px;
-      padding-left: 39px;
-      margin-top: -70px;
-      font-size: 16px;
-      font-family: @header-font2;
-      line-height: 24px;
-    }
-
-    ul {
-      height: 147px;
-      width: 100px;
-      padding: 0px 0px 0px 40px;
-      margin: -190px 0px 0px 0px;
-      color: @color-gray;
-    }
-
-    ul>li>a {
-      color: @color-orange;
-      text-decoration: none;
-      font-family: @header-font2;
-      font-size: 16px;
-      line-height: 32px;
-      padding: 10px 12px;
-    }
-
-    ul>li>a:hover {
-      color: @color-orange-lite;
-    }
-
-    ul>li>a:focus {
-      color: @color-blue;
-    }
-
-    form {
-      width: 57%;
-      min-width: 574px;
-      height: 524px;
-      float: right;
-      margin: 63px 0px 0px 0px;
-      padding: 192px 0px 0px 0px;
-      background-image: @gradient;
-    }
-
-    input[type=text], select {
-      width: 90%;
-      min-width: 524px;
-      height: 48px;
-      padding: 0 20px;
-      margin: 12px 0px;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[name="later"], select {
-      width: 90%;
-      min-width: 524px;
-      height: 192px;
-      padding: 0 20px;
-      margin: 12px 0;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[type=text]:hover {
-      border: 1px solid @color-black;
-    }
-
-    input[type=file] {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-    }
-
-    .fa-sticky-note {
-      cursor: pointer;
-      color: @color-orange;
-    }
-
-    .fa-sticky-note:hover {
-      color: @color-orange-lite;
-    }
-
-    .fa-sticky-note>span {
-      margin: 0px 0px 0px 10px;
-    }
-
-    input[type=submit] {
-      width: 95%;
-      min-width: 544px;
-      height: 49px;
-      background-color: @color-orange;
-      color: @color-white;
-      font-family: @header-font1;
-      line-height: 24px;
-      font-size: 16px;
-      padding: 14px 20px;
-      margin: 32px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-      background-color: @color-orange-lite;
-    }
-  }
-}
-
-
-
-
+                          /*------------------------------------*\
+                                        #TABLET
+                          \*------------------------------------*/
 @media (min-width: 768px) and (max-width: 1023px) {
-  html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
                                         /*HEADER*/
   header {
-    width:100%;
-    height: 1024px;
-    min-width: 768px;
-    margin:0 auto;
-    background-color: @color-blue;
-    color: @color-white;
-  }
-
-  .logo {
-    background: url(../images/logo_tablet.jpg) no-repeat;
-    height: 384px;
-    width: 384px;
-    margin-top: 50px;
-    margin-left: 28.5%;
-    margin-right: 28.5%;
-    border-radius: 300px;
-  }
-
-  .information {
-    width: 100%;
-    min-width: 768px;
-    height: 224px;
-    font-family: @header-font1;
-
-    h3 {
-      width: 100%;
-      height: 29px;
-      font-size: 16px;
-      padding-top: 97px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-     	justify-content: center;
-      align-items: center;
-      align-content: center;
-     }
-
-    h1 {
-      width: 100%px;
-      height: 80px;
-      font-size: 40px;
-      line-height: 48px;
-      padding-top: 15px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-     	justify-content: center;
-      align-items: center;
-      align-content: center;
+    margin-top: -20px !important;
+    .information {
+      h3 {
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+       }
+      h1 {
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      p {display: none;}
     }
-
-    p {
-      width: 70%;
-      height: 196px;
-      margin-top: 500px;
-      margin-left: 15%;
-      margin-right: 15%;
-      font-size: 16px;
+    .logo {
+      background: url(../images/logo_tablet.jpg) no-repeat;
+      height: 384px;
+      width: 384px;
+      margin: 0 auto;
+      border-radius: 192px;
+    }
+    .mobile {
+      display: block !important;
+      margin: 20px 10%;
+      padding: 10px 0;
       line-height: 24px;
-      font-family: @header-font2;
     }
   }
                                         /*MAIN*/
   main {
-    input[type='radio'] {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-      color: @color-white;
-      border-color: @color-white;
-    }
 
-    h1 {
-      width: 571px;
-      height: 48px;
-      margin-top: 106px;
-      margin-left: 2%;
-      font-size: 40px;
-      font-family: @header-font1;
-    }
-
-    .slider {
-      width: 96%;
-      min-width: 704px;
-      height: 448px;
-      margin-top: 38px;
-      margin-right: 2%;
-      margin-bottom: 23px;
-      margin-left: 2%;
-      border-radius: 4px;
-    }
-
-    .slide1 {
-      height: 215px;
-      width: 58%;
-      min-width: 404px;
-      background-image: @gradient;
-      margin: 0 0px 0px 0;
-      float: left;
-    }
-
-    .slide2 {
-      height: 215px;
-      width: 39%;
-      min-width: 300px;
-      background-image: @gradient;
-      float: right;
-    }
-
-    .slide3 {
-      height: 215px;
-      width: 39%;
-      min-width: 300px;
-      background-image: @gradient;
-      margin: 18px 0px 0px 0px;
-      float: left;
-    }
-
-    .slide4 {
-      height: 215px;
-      width: 58%;
-      min-width: 404px;
-      background-image: @gradient;
-      margin: 18px 0 0 0;
-      float: right;
-    }
-
-    .slide1>p, .slide2>p, .slide3>p {
-      height: 64px;
-      width: 270px;
-      padding: 32px 0 0 32px;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
-    }
-
-    .slide4>p {
-      height: 64px;
-      width: 320px;
-      padding: 32px 0 0 32px;
-      font-family: @header-font2;
-      font-size: 16px;
-      color: @color-black;
-      line-height: 24px;
-    }
-
-    .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-      padding: 20px 0 0 32px;
-    }
                                        /*GAME*/
     .my-game {
       display: flex;
@@ -975,39 +388,26 @@ html{
     .description {
       width: 704px;
       height: 147px;
-      font-family: @header-font1;
+      font-family: @fontRegular;
       display: flex;
 	    flex-direction: row;
     	flex-wrap: nowrap;
     	justify-content: space-between;
     	align-items: center;
-    	align-content: flex-start;
-    }
-
-    .jobs-head {
-      width: 304px;
-      height: 147px;
-    }
-
-    .jobs-head>h3 {
-      width: 304px;
-      height: 29px;
-      font-family: @header-font1;
-      font-size: 24px;
-      color: @color-black;
-    }
-
-    .jobs-head>a {
-      text-decoration: none;
-    }
-
-    .jobs-head>a:hover {
-      color: @color-orange;
-    }
-
-    .description>p {
-      width: 384px;
-      height: 147px;
+      align-content: flex-start;
+      h3 {
+        width: 304px;
+        height: 29px;
+        font-size: 24px;
+        color: black;
+      }
+      a {
+        text-decoration: none;
+      }
+      p {
+        width: 384px;
+        height: 147px;
+      }
     }
                                            /*SITE*/
     .my-site {
@@ -1046,252 +446,6 @@ html{
     background-image: @gradient;
     width: 100%;
     height: 960px;
-
-    .contacts {
-      width: 100%;
-      min-width: 336px;
-      height: 480px;
-    }
-
-    .contacts>h1 {
-      width: 306px;
-      height: 80px;
-      padding: 43px 16px 0px 40px;
-      font-size: 40px;
-      font-family: @header-font1;
-    }
-
-    p {
-      width: 304px;
-      height: 106px;
-      margin-top: 140px;
-      padding: 61px 0px 0px 39px;
-      font-size: 16px;
-      font-family: @header-font2;
-      line-height: 24px;
-    }
-
-    h4 {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-    }
-
-    ul {
-      height: 147px;
-      width: 144px;
-      padding: 0px 0px 0px 40px;
-      margin: -290px 0px 0px 0px;
-      color: @color-gray;
-    }
-
-    ul>li>a {
-      color: @color-orange;
-      text-decoration: none;
-      font-family: @header-font2;
-      font-size: 16px;
-      line-height: 32px;
-      padding: 10px 12px;
-    }
-
-    ul>li>a:hover {
-      color: @color-orange-lite;
-    }
-
-    ul>li>a:focus {
-      color: @color-blue;
-    }
-
-    form {
-      width: 100%;
-      min-width: 336px;
-      height: 480px;
-    }
-
-    input[type=text], select {
-      width: 75%;
-      min-width: 244px;
-      height: 48px;
-      padding: 0 20px;
-      margin: 12px 20px;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[name="later"], select {
-      width: 75%;
-      min-width: 244px;
-      height: 192px;
-      padding: 0 20px;
-      margin: 12px 20px;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[type=text]:hover {
-      border: 1px solid @color-black;
-    }
-
-    input[type=file] {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-    }
-
-    input[type=submit] {
-      width: 82%;
-      min-width: 244px;
-      height: 49px;
-      background-color: @color-orange;
-      color: @color-white;
-      font-family: @header-font1;
-      line-height: 24px;
-      font-size: 16px;
-      padding: 0px 20px;
-      margin: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-      background-color: @color-orange-lite;
-    }
-  }
-                                            /*FOOTER*/
-  footer {
-    background-image: @gradient;
-    width: 100%;
-    height: 769px;
-
-    .contacts {
-      width: 100%;
-      min-width: 768px;
-      height: 265px;
-    }
-
-    .contacts>h1 {
-      width: 503px;
-      height: 48px;
-      padding: 43px 16px 0px 40px;
-      font-size: 40px;
-      font-family: @header-font1;
-    }
-
-    p {
-      width: 384px;
-      height: 106px;
-      margin-top: 0px;
-      padding: 0px 0px 0px 39px;
-      font-size: 16px;
-      font-family: @header-font2;
-      line-height: 24px;
-      float: left;
-    }
-
-    h4 {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-    }
-
-    ul {
-      height: 147px;
-      width: 144px;
-      padding: 0px 0px 0px 40px;
-      margin: 0px 80px 0px 0px;
-      color: @color-gray;
-      float: right;
-    }
-
-    ul>li>a {
-      color: @color-orange;
-      text-decoration: none;
-      font-family: @header-font2;
-      font-size: 16px;
-      line-height: 32px;
-      padding: 10px 12px;
-    }
-
-    ul>li>a:hover {
-      color: @color-orange-lite;
-    }
-
-    ul>li>a:focus {
-      color: @color-blue;
-    }
-
-    form {
-      width: 100%;
-      min-width: 336px;
-      height: 480px;
-    }
-
-    input[type=text], select {
-      width: 90%;
-      min-width: 244px;
-      height: 48px;
-      padding: 0 20px;
-      margin: 12px 20px;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[name="later"], select {
-      width: 90%;
-      min-width: 244px;
-      height: 192px;
-      padding: 0 20px;
-      margin: 12px 20px;
-      background: @color-white;
-      border: 1px solid @color-white;
-      border-radius: 4px;
-    }
-
-    input[type=text]:hover {
-      border: 1px solid @color-black;
-    }
-
-    input[type=file] {
-      width: 0.1px;
-    	height: 0.1px;
-	    opacity: 0;
-	    overflow: hidden;
-	    position: absolute;
-      z-index: -1;
-    }
-
-    input[type=submit] {
-      width: 95%;
-      min-width: 244px;
-      height: 49px;
-      background-color: @color-orange;
-      color: @color-white;
-      font-family: @header-font1;
-      line-height: 24px;
-      font-size: 16px;
-      padding: 0px 20px;
-      margin: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-      background-color: @color-orange-lite;
-    }
   }
 }
 
@@ -1308,8 +462,6 @@ html{
     height: 648px;
     min-width: 336px;
     margin:0 auto;
-    background-color: @color-blue;
-    color: @color-white;
   }
 
   .logo {
@@ -1326,7 +478,6 @@ html{
     width: 100%;
     min-width: 336px;
     height: 147px;
-    font-family: @header-font1;
 
     h3 {
       width: 100%;
@@ -1365,7 +516,6 @@ html{
       padding-right: 5%;
       font-size: 16px;
       line-height: 24px;
-      font-family: @header-font2;
     }
   }
 
@@ -1422,16 +572,16 @@ html{
     height: 64px;
     width: 400px;
     padding: 32px 0 0 32px;
-    font-family: @header-font2;
+    font-family: @fontRegular;
     font-size: 16px;
-    color: @color-black;
+    color: black;
     line-height: 24px;
   }
 
   .slide1>h2, .slide2>h2, .slide3>h2, .slide4>h2 {
-    font-family: @header-font1;
+    font-family: @fontBold;
     font-size: 24px;
-    color: @color-black;
+    color: black;
     padding: 32px 0 0 32px;
   }
 
@@ -1445,14 +595,14 @@ html{
     position: absolute;
   }
 
-  .wrapper label {
+  label {
     cursor: pointer;
     display: inline-block;
     height: 8px;
     margin: 25px 12px 0 16px;
     position: relative;
     width: 8px;
-    background: @color-orange;
+    background: @color-button;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
@@ -1468,7 +618,7 @@ html{
   #slide2:checked ~ .controls label:nth-of-type(2),
   #slide3:checked ~ .controls label:nth-of-type(3),
   #slide4:checked ~ .controls label:nth-of-type(4) {
-    background: @color-black;
+    background: black;
   }
                                               /*GAME*/
   .my-game {
@@ -1489,23 +639,16 @@ html{
   .description {
     width: 304px;
     height: 224px;
-    font-family: @header-font1;
   }
 
   .jobs-head>h3 {
     width: 304px;
     height: 29px;
-    font-family: @header-font1;
     font-size: 24px;
-    color: @color-black;
   }
 
   .jobs-head>a {
     text-decoration: none;
-  }
-
-  .jobs-head>a:hover {
-    color: @color-orange;
   }
                                          /*SITE*/
   .my-site {
@@ -1539,7 +682,6 @@ html{
   }
                                             /*FOOTER*/
   footer {
-    background-image: @gradient;
     width: 100%;
     height: 960px;
 
@@ -1554,7 +696,6 @@ html{
       height: 80px;
       padding: 43px 16px 0px 40px;
       font-size: 40px;
-      font-family: @header-font1;
     }
 
     p {
@@ -1563,7 +704,6 @@ html{
       margin-top: 140px;
       padding: 61px 0px 0px 39px;
       font-size: 16px;
-      font-family: @header-font2;
       line-height: 24px;
     }
 
@@ -1581,24 +721,13 @@ html{
       width: 144px;
       padding: 0px 0px 0px 40px;
       margin: -290px 0px 0px 0px;
-      color: @color-gray;
     }
 
     ul>li>a {
-      color: @color-orange;
       text-decoration: none;
-      font-family: @header-font2;
       font-size: 16px;
       line-height: 32px;
       padding: 10px 12px;
-    }
-
-    ul>li>a:hover {
-      color: @color-orange-lite;
-    }
-
-    ul>li>a:focus {
-      color: @color-blue;
     }
 
      form {
@@ -1613,8 +742,6 @@ html{
       height: 48px;
       padding: 0 20px;
       margin: 12px 20px;
-      background: @color-white;
-      border: 1px solid @color-white;
       border-radius: 4px;
     }
 
@@ -1624,13 +751,7 @@ html{
       height: 192px;
       padding: 0 20px;
       margin: 12px 20px;
-      background: @color-white;
-      border: 1px solid @color-white;
       border-radius: 4px;
-    }
-
-    input[type=text]:hover {
-      border: 1px solid @color-black;
     }
 
     input[type=file] {
@@ -1646,9 +767,6 @@ html{
       width: 82%;
       min-width: 244px;
       height: 49px;
-      background-color: @color-orange;
-      color: @color-white;
-      font-family: @header-font1;
       line-height: 24px;
       font-size: 16px;
       padding: 0px 20px;
@@ -1656,10 +774,6 @@ html{
       border: none;
       border-radius: 4px;
       cursor: pointer;
-    }
-
-    input[type=submit]:hover {
-      background-color: @color-orange-lite;
     }
   }
 }
