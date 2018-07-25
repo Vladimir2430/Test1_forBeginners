@@ -2,6 +2,7 @@
 
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
@@ -13,6 +14,12 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: [{
+          loader: 'html-loader'
+        }]
+      },
       {
         test: /\.less$/,
         use: ExtractTextPlugin.extract({
@@ -47,7 +54,7 @@ module.exports = {
         test: /\.jpg$/,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[ext]'
+          name: '../images/[name].[ext]'
         }
       },
       {
@@ -63,8 +70,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
-    new ImageminPlugin({test: /\.jpg$/})
+    new ExtractTextPlugin('css/bundle.css'),
+    new ImageminPlugin({test: /\.jpg$/}),
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
   ],
   devServer: {
     host: 'localhost',

@@ -6,3 +6,4 @@ npm-debug*
 .idea
 *.bundle.js
 package-lock.json
+bundle.js
