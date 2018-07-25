@@ -1,14 +1,25 @@
-@color-blue: #082841;
-@color-white: #ffffff;
-@color-black: #000000;
-@color-orange: #DD3E18;
-@color-orange-lite: rgb(255, 94, 0);
-@color-gray: rgb(195, 211, 211);
-
-@header-font1: "Helvetica-Bold",  sans-serif;
-@header-font2: "Georgia",  sans-serif;
-
+@color-header: #082841;
+@color-button: #DD3E18;
+@color-button-hover: rgb(255, 94, 0);
 @gradient: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+.font-face(Helvetica){
+  @font-face{
+    font-family: Helvetica-Bold;
+    src:url('../fonts/helvetica-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+.font-face(Georgia){
+  @font-face{
+    font-family: Georgia;
+    src:url('../fonts/Georgia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+@fontBold: "Helvetica", serif;
+@fontRegular: "Georgia", serif;
 
 html{
   width: 100%;
@@ -323,7 +334,7 @@ html{
       color: @color-blue;
     }
 
-    .forms {
+    form {
       width: 40%;
       min-width: 574px;
       height: 524px;
@@ -402,10 +413,6 @@ html{
     }
   }
 }
-
-
-
-
 
 @media  (min-width: 1024px) and (max-width: 1439px) {
                                         /*HEADER*/
@@ -638,13 +645,13 @@ html{
   }
                                         /*FOOTER*/
   footer {
+    background-image: @gradient;
     .contacts {
       width: 43%;
       min-width: 429px;
       height: 715px;
       margin: 63px 0px 0px 0px;
       float: left;
-      background-image: @gradient;
     }
 
     .contacts>h1 {
@@ -701,7 +708,7 @@ html{
       color: @color-blue;
     }
 
-    .forms {
+    form {
       width: 57%;
       min-width: 574px;
       height: 524px;
@@ -1098,7 +1105,7 @@ html{
       color: @color-blue;
     }
 
-    .forms {
+    form {
       width: 100%;
       min-width: 336px;
       height: 480px;
@@ -1137,20 +1144,6 @@ html{
 	    overflow: hidden;
 	    position: absolute;
       z-index: -1;
-    }
-
-    .fa-sticky-note {
-      cursor: pointer;
-      color: @color-orange;
-      margin-left: 20px;
-    }
-
-    .fa-sticky-note:hover {
-      color: @color-orange-lite;
-    }
-
-    .fa-sticky-note>span {
-      margin: 0px 0px 0px 10px;
     }
 
     input[type=submit] {
@@ -1239,7 +1232,7 @@ html{
       color: @color-blue;
     }
 
-    .forms {
+    form {
       width: 100%;
       min-width: 336px;
       height: 480px;
@@ -1280,20 +1273,6 @@ html{
       z-index: -1;
     }
 
-    .fa-sticky-note {
-      cursor: pointer;
-      color: @color-orange;
-      margin-left: 20px;
-    }
-
-    .fa-sticky-note:hover {
-      color: @color-orange-lite;
-    }
-
-    .fa-sticky-note>span {
-      margin: 0px 0px 0px 10px;
-    }
-
     input[type=submit] {
       width: 95%;
       min-width: 244px;
@@ -1315,11 +1294,6 @@ html{
     }
   }
 }
-
-
-
-
-
 
 @media (min-width: 336px) and (max-width: 767px) {
                                           /*HEADER*/
@@ -1627,7 +1601,7 @@ html{
       color: @color-blue;
     }
 
-    .forms {
+     form {
       width: 100%;
       min-width: 336px;
       height: 480px;
@@ -1666,20 +1640,6 @@ html{
 	    overflow: hidden;
 	    position: absolute;
       z-index: -1;
-    }
-
-    .fa-sticky-note {
-      cursor: pointer;
-      color: @color-orange;
-      margin-left: 20px;
-    }
-
-    .fa-sticky-note:hover {
-      color: @color-orange-lite;
-    }
-
-    .fa-sticky-note>span {
-      margin: 0px 0px 0px 10px;
     }
 
     input[type=submit] {
