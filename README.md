@@ -1,7 +1,7 @@
 # Do you want to see my work?
-# <a href="http://uladzimir-yeudakimovich.ml/Test1_forBeginners/">Click there ;)</a>
+# <a href="http://uladzimir-yeudakimovich.github.io/Test1_forBeginners/">Click there ;)</a>
 # Do you want to see the validity?
-# <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fuladzimir-yeudakimovich.ml%2FTest1_forBeginners%2F">Click there ;)</a>
+# <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fuladzimir-yeudakimovich.github.io%2FTest1_forBeginners%2F">Click there ;)</a>
 
 Создайте сайт-портфолио: расскажите о себе, своих работах и ожиданиях от занятий у нас. Сайт должен максимально соответствовать предложенному макету (ссылки на макет: [1440px](https://yandex-shri-minsk-2018.github.io/task-1/#artboard0 "1440px"), [1024px](https://yandex-shri-minsk-2018.github.io/task-1/#artboard1 "1024px"), [768px](https://yandex-shri-minsk-2018.github.io/task-1/#artboard2 "768px"), [336px](https://yandex-shri-minsk-2018.github.io/task-1/#artboard3 "336px")). Приветствуется семантическая вёрстка и современные CSS-решения, JavaScript просьба не использовать.
 
